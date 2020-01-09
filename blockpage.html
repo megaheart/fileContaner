@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <style>
+            @font-face {
+                font-family: "Segoe UI";
+                src: url("/surface/Assets/css/fonts/all/normal/segoeui.eot");
+                src: url("/surface/Assets/css/fonts/all/normal/segoeui.eot?#iefix")
+                        format("embedded-opentype"),
+                    url("/surface/Assets/css/fonts/all/normal/segoeui.woff")
+                        format("woff"),
+                    url("/surface/Assets/css/fonts/all/normal/segoeui.svg#SegoeUI")
+                        format("svg");
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: "Segoe UI Semibold";
+                src: url("/surface/Assets/css/fonts/all/semibold/seguisb.eot");
+                src: url("/surface/Assets/css/fonts/all/semibold/seguisb.eot?#iefix")
+                        format("embedded-opentype"),
+                    url("/surface/Assets/css/fonts/all/semibold/seguisb.woff")
+                        format("woff"),
+                    url("/surface/Assets/css/fonts/all/semibold/seguisb.svg#SegoeUISemibold")
+                        format("svg");
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: "Segoe UI Bold";
+                src: url("/surface/Assets/css/fonts/all/bold/segoeuib.eot");
+                src: url("/surface/Assets/css/fonts/all/bold/segoeuib.eot?#iefix")
+                        format("eot"),
+                    /* Wrong format will tell IE9+ to ignore and use WOFF instead. MSHAR-2822 */
+                        url("/surface/Assets/css/fonts/all/bold/segoeuib.woff")
+                        format("woff"),
+                    url("/surface/Assets/css/fonts/all/bold/segoeuib.svg#SegoeUIBold")
+                        format("svg");
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: "Segoe UI Light";
+                src: url("/surface/Assets/css/fonts/all/light/segoeuil.eot");
+                src: url("/surface/Assets/css/fonts/all/light/segoeuil.eot?#iefix")
+                        format("embedded-opentype"),
+                    url("/surface/Assets/css/fonts/all/light/segoeuil.woff")
+                        format("woff"),
+                    url("/surface/Assets/css/fonts/all/light/segoeuil.svg#SegoeUILight")
+                        format("svg");
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            *{margin:0px;padding: 0px; box-sizing: border-box;}
+            html{height: 100%;}
+            body{
+              height: 100%;
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              background: linear-gradient(to right,#161616,#353535);
+              font-size: 16px;
+            }
+            body>a,body>div:not(#other){
+              display: block;
+              color: #ffffff;
+              text-shadow: #000000 0 0 1px;
+              user-select: none;
+              transition: 0.4s;
+              height: 220px;
+            }
+            body>a>div,body>div:not(#other)>div
+            {
+              display: grid;
+              grid-template-columns: 320px auto;
+              height: 220px;
+              width: 1100px;
+              margin: 0 auto;
+              transition: 0.4s;
+            }
+            body>a:hover,body>div:not(#other):hover{
+              height: 250px;
+            }
+            body>a:hover>div,body>div:not(#other):hover>div{
+              height: 250px;
+            }
+            #exercises{
+              background: linear-gradient(to right, rgb(17, 138, 47), rgb(23, 163, 58));
+            }
+            #learn-english{
+              background: linear-gradient(to right,#f07f03,#ff901a);
+              color: #790000;
+              text-shadow: none;
+              overflow: hidden;
+            }
+            a{
+              text-decoration: none;
+            }
+            body>a>div>.icon-container,body>div:not(#other)>div>.icon-container{
+              display: grid;
+              justify-content: center;
+              grid-row: auto auto auto;
+            }
+            body>a>div>.icon-container>img,body>div:not(#other)>div>.icon-container>img{
+              grid-row: 2;
+              max-height: 160px;
+            }
+            body>a>div>.content,body>div:not(#other)>div>.content{
+              padding: 50px 70px 0 0;
+            }
+            body>a>div>.content>h4,body>div:not(#other)>div>.content>h4{
+              font-size: 35px;
+              font-weight: 300;
+              margin: 0 0 15px 0;
+            }
+            #other{
+              display: flex;
+              position: fixed;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              justify-content: center;
+              height: 180px;
+            }
+            #other>a{
+              display: flex;
+              background: rgb(41, 41, 41);
+              border-radius: 5px;
+              padding: 10px;
+              height: 120px;
+              width: 130px;
+              margin: 0 20px;
+              align-items: center;
+              flex-direction: column;
+              box-shadow: #060606 0 1px 4px;
+              transition: 0.4s;
+            }
+            #other>a:hover{
+              box-shadow: #060606 0 1px 8px;
+              transform: translateY(4px);
+            }
+            #other>a>img{
+              height: 70px;
+              width: 100px;
+              border-radius: 5px;
+            }
+            #other>a>span{
+              margin-top: 5px;
+              color: #ffffff;
+            }
+        </style>
+    </head>
+    <body>
+        <a id="learn-english" href="https://www.tienganh123.com/">
+          <div>
+            <div class="icon-container">
+              <img src="https://rawcdn.githack.com/megaheart/fileContaner/cf8ea498430de7491a25917461c6ee50624565a8/icons/tienganh123.png"></img>
+            </div>
+            <div class="content">
+              <h4>Learn English</h4>
+              <span>To go far in your life</span>
+            </div>
+          </div>
+        </a>
+        <div id="exercises">
+            <div>
+              <div class="icon-container">
+                <img src="https://rawcdn.githack.com/megaheart/fileContaner/cf8ea498430de7491a25917461c6ee50624565a8/icons/weightlift.png"></img>
+              </div>
+              <div class="content">
+                <h4>Do Exercises</h4>
+                <span>10 cái gập bụng, 40 cái chống đẩy, 50 lần đứng lên ngồi xuống, 10 cái hít xà đơn</span>
+              </div>
+            </div>
+        </div>
+        <div id="other">
+          <a href="https://www.dailymotion.com/hamtruyentv/videos">
+            <img src="https://rawcdn.githack.com/megaheart/fileContaner/cf8ea498430de7491a25917461c6ee50624565a8/icons/hamtruyen.png"/>
+            <span>Ham truyện</span>
+          </a>
+          <a href="https://ln.hako.re/truyen/3285-lop-hoc-cua-thuong-dang">
+            <img src="https://rawcdn.githack.com/megaheart/fileContaner/cf8ea498430de7491a25917461c6ee50624565a8/icons/EMn7JS0UcAEgSsW.jpg"/>
+            <span>Youkoso</span>
+          </a>
+          <a href="https://anime47.com/">
+            <img src="https://rawcdn.githack.com/megaheart/fileContaner/cf8ea498430de7491a25917461c6ee50624565a8/icons/anime47.jpg"/>
+            <span>Anime 47</span>
+          </a>
+        </div>
+        <script>
+          var isExpand = false;
+          var exercisesBox = document.querySelector("#exercises");
+          exercisesBox.addEventListener("click",function(){
+            if(isExpand) return;
+            isExpand = true;
+            document.querySelector("#learn-english").style.transition = "0.15s";
+            document.querySelector("#learn-english").style.height = "0px";
+            document.querySelector("#other").style.display = "none";
+            exercisesBox.style.height = "100%";
+            exercisesBox.children[0].style.height = "100%";
+            exercisesBox.querySelector(".content").style.paddingTop = "280px";
+          });
+        </script>
+    </body>
+</html>
