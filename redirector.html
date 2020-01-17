@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+  <title id="location"></title>
+
+</head>
+<body>
+  <p style="margin: 30px;"> redirector_address?protocol=https&domain=tv&host=animetvn&path=/xem-phim/f161630-rikei-ga-koi-ni-ochita-no-de-shoumei-shitemitatap-01.html</p>
+  <script>
+    var link = window.location.search;
+    if(link !== "") {
+      link = link.substr(1, link.length - 1);
+      var info = {
+        host:"",
+        domain:"",
+        path:"",
+        protocol:""
+      };
+      var s = "";
+      var property="";
+      for(var i = 0;i<link.length;i++){
+        if(link[i]==='='){
+          property = s;
+          s="";
+        } else if(link[i]==='&') {
+          info[property] = s;
+          s="";
+        } else{
+          s+=link[i];
+        }
+        
+      }
+      info[property] = s;
+      link = info.protocol + "://" + info.host + "." + info.domain + info.path;
+      document.querySelector("#location").textContent = link;
+      window.location.replace(link);
+    }
+  </script>
+</body>
